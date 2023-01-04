@@ -1,0 +1,374 @@
+{
+  "observerUrl": "./preview/dist/pinterest-feed-observer.js",
+  "preferences": {
+    "previewUpdateTimeout": 0,
+    "enableCustomCSS": true
+  },
+  "settings": {
+    "tabs": [
+      {
+        "id": "content",
+        "name": "Content",
+        "active": true
+      },
+      {
+        "id": "layout",
+        "name": "Layout"
+      },
+      {
+        "id": "style",
+        "name": "Style"
+      }
+    ],
+    "properties": [
+      {
+        "id": "contentToDisplay",
+        "name": "Content to display",
+        "tab": "content",
+        "type": "select-inline",
+        "defaultValue": "user",
+        "selectInline": {
+          "options": [
+            {
+              "value": "user",
+              "name": "Profile"
+            },
+            {
+              "value": "boards",
+              "name": "Boards"
+            },
+            {
+              "value": "pins",
+              "name": "Pins"
+            }
+          ]
+        },
+        "description": "Select the kind of content you need to display - Pinterest feed by account, Pinterest boards, Pinterest Pins."
+      },
+      {
+        "id": "user",
+        "name": "Profile",
+        "visible": true,
+        "tab": "content",
+        "type": "text",
+        "defaultValue": "elfsight",
+        "description": "Set Pinterest user to display in the widget."
+      },
+      {
+        "id": "boards",
+        "name": "Boards",
+        "visible": true,
+        "tab": "content",
+        "type": "tags",
+        "defaultValue": [],
+        "description": "Set Pinterest boards to display in the widget."
+      },
+      {
+        "id": "pins",
+        "name": "Pin or Board URL",
+        "visible": true,
+        "tab": "content",
+        "type": "tags",
+        "defaultValue": [],
+        "description": "Set the URL of a pin or a board to add pins to your feed."
+      },
+      {
+        "tab": "content",
+        "type": "divider"
+      },
+      {
+        "id": "lang",
+        "name": "Language",
+        "tab": "content",
+        "type": "select",
+        "select": {
+          "options": [
+            {
+              "value": "en",
+              "name": "English"
+            },
+            {
+              "value": "cz",
+              "name": "Čeština - Czech"
+            },
+            {
+              "value": "da",
+              "name": "Dansk - Danish"
+            },
+            {
+              "value": "de",
+              "name": "Deutsch - German"
+            },
+            {
+              "value": "es",
+              "name": "Español - Spanish"
+            },
+            {
+              "value": "fr",
+              "name": "Français - French"
+            },
+            {
+              "value": "it",
+              "name": "Italiano - Italian"
+            },
+            {
+              "value": "hu",
+              "name": "Magyar - Hungarian"
+            },
+            {
+              "value": "nl",
+              "name": "Nederlands - Dutch"
+            },
+            {
+              "value": "no",
+              "name": "Norsk - Norwegian"
+            },
+            {
+              "value": "pl",
+              "name": "Polski - Polish"
+            },
+            {
+              "value": "pt",
+              "name": "Português - Portuguese"
+            },
+            {
+              "value": "ro",
+              "name": "Română - Romanian"
+            },
+            {
+              "value": "fi",
+              "name": "Suomi - Finnish"
+            },
+            {
+              "value": "sv",
+              "name": "Svenska - Swedish"
+            },
+            {
+              "value": "tr",
+              "name": "Türkçe - Turkish"
+            },
+            {
+              "value": "ru",
+              "name": "Русский - Russian"
+            },
+            {
+              "value": "ar",
+              "name": "العربية - Arabic"
+            },
+            {
+              "value": "hi",
+              "name": "हिन्दी - Hindi"
+            },
+            {
+              "value": "ja",
+              "name": "日本語 - Japanese"
+            },
+            {
+              "value": "zh-cn",
+              "name": "简体中文 - Simplified Chinese"
+            },
+            {
+              "value": "zh-tw",
+              "name": "繁體中文 - Traditional Chinese"
+            }
+          ]
+        },
+        "defaultValue": "en",
+        "description": "Choose one of the available languages of widget's UI."
+      },
+      {
+        "id": "widgetTitle",
+        "name": "Feed Title",
+        "tab": "content",
+        "type": "text",
+        "defaultValue": "Pinterest Feed",
+        "allowEmpty": true,
+        "description": "Set the feed title. URLs, hashtags (with #) and Pinterest usernames (with @) will be automatically displayed as clickable links."
+      },
+      {
+        "id": "boardsCount",
+        "name": "Number of boards displayed",
+        "visible": false,
+        "tab": "content",
+        "type": "number",
+        "defaultValue": "",
+        "description": "Set the maximum number of boards you need to display. Leave this option empty or \"0\" to show all available boards."
+      },
+      {
+        "id": "pinsCount",
+        "name": "Number of pins displayed",
+        "visible": false,
+        "tab": "content",
+        "type": "number",
+        "defaultValue": "",
+        "description": "Set the maximum number of pins you need to display. Leave this option empty or \"0\" to show all available pins."
+      },
+      {
+        "id": "width",
+        "name": "Width (px, %, auto)",
+        "tab": "layout",
+        "type": "text",
+        "defaultValue": 500,
+        "description": "Set the widget width in pixels. Or set \"auto\" to make it full width."
+      },
+      {
+        "id": "height",
+        "name": "Height (px, auto)",
+        "tab": "layout",
+        "type": "text",
+        "defaultValue": 720,
+        "description": "Set the widget height in pixels. Set \"auto\" to make the widget adapt to content size."
+      },
+      {
+        "id": "headerSettings",
+        "name": "Header Settings",
+        "tab": "layout",
+        "type": "subgroup",
+        "subgroup": {
+          "properties": [
+            {
+              "id": "headerVisible",
+              "name": "Show header",
+              "type": "toggle",
+              "defaultValue": true,
+              "description": "Show/hide the header."
+            },
+            {
+              "id": "headerParts",
+              "name": "Pin elements to display",
+              "type": "checklist",
+              "checklist": {
+                "options": [
+                  {
+                    "value": "image",
+                    "name": "Image"
+                  },
+                  {
+                    "value": "name",
+                    "name": "Name"
+                  },
+                  {
+                    "value": "followers",
+                    "name": "Followers"
+                  },
+                  {
+                    "value": "follow-button",
+                    "name": "Follow button"
+                  }
+                ]
+              },
+              "defaultValue": [
+                "image",
+                "name",
+                "followers",
+                "follow-button"
+              ],
+              "description": "Choose the elements to show/hide for widget header."
+            }
+          ]
+        }
+      },
+      {
+        "id": "boardsSettings",
+        "name": "Boards Settings",
+        "tab": "layout",
+        "type": "subgroup",
+        "subgroup": {
+          "properties": [
+            {
+              "id": "boardParts",
+              "name": "Board elements to display",
+              "type": "checklist",
+              "checklist": {
+                "options": [
+                  {
+                    "value": "name",
+                    "name": "Name"
+                  },
+                  {
+                    "value": "pinterest-icon",
+                    "name": "Pinterest Icon"
+                  },
+                  {
+                    "value": "pins-count",
+                    "name": "Pins Count"
+                  }
+                ]
+              },
+              "defaultValue": [
+                "name",
+                "pinterest-icon",
+                "pins-count"
+              ],
+              "description": "Choose the elements to show/hide for each board in the widget."
+            }
+          ]
+        }
+      },
+      {
+        "id": "pinSettings",
+        "name": "Pins Settings",
+        "tab": "layout",
+        "type": "subgroup",
+        "subgroup": {
+          "properties": [
+            {
+              "id": "pinsVisible",
+              "name": "Show Pins",
+              "type": "toggle",
+              "defaultValue": true,
+              "description": "Show/hide pins."
+            },
+            {
+              "id": "pinParts",
+              "name": "Pin elements to display",
+              "type": "checklist",
+              "checklist": {
+                "options": [
+                  {
+                    "value": "author",
+                    "name": "Author"
+                  },
+                  {
+                    "value": "note",
+                    "name": "Text"
+                  },
+                  {
+                    "value": "share-button",
+                    "name": "Share Button"
+                  },
+                  {
+                    "value": "pinterest-icon",
+                    "name": "Pinterest Icon"
+                  }
+                ]
+              },
+              "defaultValue": [
+                "author",
+                "note",
+                "share-button",
+                "pinterest-icon"
+              ],
+              "description": "Choose the elements to show/hide for each pin in the widget."
+            },
+            {
+              "id": "transformLinksAndTags",
+              "name": "Transform Links and Tags",
+              "type": "toggle",
+              "defaultValue": true,
+              "description": "."
+            }
+          ]
+        }
+      },
+      {
+        "id": "themeColor",
+        "name": "Theme color",
+        "tab": "style",
+        "type": "color",
+        "defaultValue": "rgb(230, 0, 35)",
+        "description": "Select the theme color for your widget elements."
+      }
+    ]
+  }
+}
